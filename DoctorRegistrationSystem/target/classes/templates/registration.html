@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Doctor Registration</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/style.css}">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+    <div class="container">
+        <h2>Doctor Registration Form</h2>
+		<form action="#" th:action="@{/doctors/register}" th:object="${doctor}" method="post">
+
+            
+            <!-- Row 1: Name + Phone No -->
+            <div class="form-row">
+                <div class="form-field">
+                    <label>Name:</label>
+                    <input type="text" th:field="*{name}" required/>
+                </div>
+                <div class="form-field">
+                    <label>Phone No:</label>
+                    <input type="text" th:field="*{phoneNo}" required/>
+                </div>
+            </div>
+            
+            <!-- Row 2: Whatsapp No + Country Code -->
+            <div class="form-row">
+                <div class="form-field">
+                    <label>Whatsapp No:</label>
+                    <input type="text" th:field="*{whatsappNo}" required/>
+                </div>
+                <div class="form-field">
+                    <label>Country Code:</label>
+                    <input type="text" th:field="*{countryCode}" required/>
+                </div>
+            </div>
+            
+            <!-- Row 3: Email + Gender -->
+            <div class="form-row">
+                <div class="form-field">
+                    <label>Email:</label>
+                    <input type="email" th:field="*{email}" required/>
+                </div>
+                <div class="form-field">
+                    <label>Gender:</label>
+                    <select th:field="*{gender}">
+                        <option value="M">Male</option>
+                        <option value="F">Female</option>
+                    </select>
+                </div>
+            </div>
+            
+            <!-- Row 4: Age -->
+            <div class="form-row">
+                <div class="form-field">
+                    <label>Age:</label>
+                    <input type="number" th:field="*{age}" required/>
+                </div>
+            </div>
+            
+            <!-- Submit Button -->
+            <button type="submit">Register</button>
+        </form>
+        
+        <p th:text="${message}"></p>
+    </div>
+</body>
+</html>

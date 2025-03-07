@@ -1,0 +1,78 @@
+/* Body: White background, center everything */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #ffffff;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full viewport height */
+}
+
+/* Container with a bit more width for 2-column rows */
+.container {
+    width: 90%;
+    max-width: 420px; /* Wider so two fields fit nicely in one row */
+    background-color: #ffffff; 
+    padding: 15px;
+    border: 2px solid #ff6600; /* Orange border */
+    border-radius: 6px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* Heading styling */
+h2 {
+    color: #ff6600;
+    text-align: center;
+    margin-bottom: 15px;
+    font-size: 1.2em;
+}
+
+/* .form-row will contain 2 .form-field side by side */
+.form-row {
+    display: flex;
+    gap: 10px; /* Space between fields */
+    margin-bottom: 10px;
+}
+
+/* Each field in a row shares available space */
+.form-field {
+    flex: 1; 
+    display: flex;
+    flex-direction: column;
+}
+
+/* Label styling */
+.form-field label {
+    margin-bottom: 4px;
+    font-weight: bold;
+    font-size: 0.85em;
+}
+
+/* Inputs & selects with smaller padding */
+input, select {
+    padding: 6px;
+    border: 1px solid #ffcc99;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 0.85em;
+    width: 100%;
+}
+
+/* Button with orange background */
+button {
+    background-color: #ff6600;
+    color: #ffffff;
+    padding: 8px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 0.95em;
+    margin-top: 10px; /* Space above button */
+}
+
+button:hover {
+    background-color: #e65c00;
+}
